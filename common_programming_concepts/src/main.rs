@@ -8,6 +8,14 @@
 // note that consts are not able to have the mutation key word added 
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
+
+/*
+NOTE THAT THIS CODE WILL NOT COMPILE ITS FOR NOTES ONLY 
+
+*/
+
+
+
 // Example of shadowing, note that the shadowing is localized only 
 fn main(){
     let x = 5;
@@ -20,7 +28,7 @@ fn main(){
     println!("The value of x is: {x}");
 
     //example of a tuple declaration
-    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let mut tup: (i32, f64, u8) = (500, 6.4, 1);
     // deconstruction of tuple  
     let (x, y, z) = tup;
     // access by entryy 
@@ -36,7 +44,7 @@ fn main(){
     let b = a[0];
 
     // example if else 
-    let number = 5
+    let number = 5;
     // each one of these choices is called an arm
     if number < 5 {
         println!("condition was true");
