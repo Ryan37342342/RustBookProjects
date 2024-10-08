@@ -41,6 +41,8 @@ fn main(){
     else {
         println!("Number {temp} is too small to calculate fibonacci sequence number, must be bigger than 3")
     }
+
+    print_lyrics();
 }
 
 
@@ -57,4 +59,30 @@ fn generate_fibonacci_sequence(num:f32) -> f32 {
         (num+1.0) + (num -2.0)
         };
     return fib;
+}
+
+
+fn print_lyrics(){
+    let gifts = ["a partridge in a pear tree","Two turtle doves","Three French hens", "Four calling birds", "Five golden rings",  "Six geese a-laying",
+    "Seven swans a-swimming","Eight maids a-milking","Nine ladies dancing","Ten lords a-leaping","Eleven pipers piping",
+    "Twelve drummers drumming"];
+    let mut verse =1;
+    // for each verse in the song 
+    while verse<=12{   
+        println!("On the {} day of Christmas my true love gave to me...",verse);
+        // print the verses out 
+        for index in (0..verse).rev(){
+            // handle last case and first case seperately
+            if index == 0 && verse !=1{
+                println!("and {}!", gifts[index]);
+            }else if index==0 {
+                println!("{}!",gifts[index])
+            }
+            else{
+                println!("{},",gifts[index]);
+            }
+        }
+        println!();
+        verse+=1;
+    }
 }
